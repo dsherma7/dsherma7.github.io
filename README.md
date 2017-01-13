@@ -3,6 +3,8 @@
 ## Welcome to GitHub Pages
 
 <red> STA 141B Red Thing</red>
+<red2> STA 141B Red Thing</red2>
+<tt> STA 141B Red Thing</tt>
 
 You can use the [editor on GitHub](https://github.com/dsherma7/dsherma7.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
