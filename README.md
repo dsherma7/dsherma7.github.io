@@ -1,13 +1,13 @@
-#### 237 Markham Ave. Vacaville, Ca. 95688
-#### desherman@ucdavis.edu
-#### LinkedIn.com/in/Doug-Sherman-b3823b97
+<h4> 237 Markham Ave. Vacaville, Ca. 95688 </h4>
+<h4> <a href=mailto:desherman@ucdavis.edu></a> </h4>
+<h4> <a href=https:/LinkedIn.com/in/Doug-Sherman-b3823b97></a> </h4>
 
 
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
+```javascript
 class SomeClass{
   public:
       SomeClass()
