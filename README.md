@@ -1,6 +1,6 @@
 <h4> 237 Markham Ave. Vacaville, Ca. 95688 </h4>
-<h4> <a href=mailto:desherman@ucdavis.edu></a> </h4>
-<h4> <a href=https:/LinkedIn.com/in/Doug-Sherman-b3823b97></a> </h4>
+<p>[desherman@ucdavis.edu](mailto:desherman@ucdavis.edu) </p>
+<p>[LinkedIn](https:/LinkedIn.com/in/Doug-Sherman-b3823b97) </p>
 
 
 ### Markdown
