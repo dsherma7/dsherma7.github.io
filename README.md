@@ -1,6 +1,6 @@
 <h4> 237 Markham Ave. Vacaville, Ca. 95688 </h4>
-<p>[desherman@ucdavis.edu](mailto:desherman@ucdavis.edu) </p>
-<p>[LinkedIn](https:/LinkedIn.com/in/Doug-Sherman-b3823b97) </p>
+<p>mailto:desherman@ucdavis.edu</p>
+<p>https:/LinkedIn.com/in/Doug-Sherman-b3823b97</p>
 
 
 ### Markdown
@@ -15,7 +15,6 @@ class SomeClass{
   private:
       int x;
 }
-
 ```
 
 
