@@ -3,16 +3,20 @@
 <!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
 <head>
+
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+  <!-- MathJax Tex in HTML -->
   <link rel="stylesheet" href="/assets/css/style.css?v=8181ab6854913edc34fc8ba98f4ea1ae211f4b1a">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/assets/js/script.js"></script>
-    <script type="text/javascript"
-          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
-
+  {% include html_meta %}
+    <!-- <link href="/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet"> -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    {% if page.use_math %}
+      {% include mathjax_support %}
+    {% endif %}
+    <!-- /////////////////// -->
 
   <title>dsherma7.github.io</title>
   <meta name="description" content="My Personal Github Webpage">
@@ -22,6 +26,16 @@
 </head>
 
 <body>
+
+   {% include navigation_bar %}
+    <div class="container-narrow">
+      <div class="content">
+        {{ content }}
+      </div>
+      <hr/>
+      {% include footer %}
+    </div>
+    {% include JB/analytics %}
 
   <div class="wrapper">
     <header>
