@@ -45,14 +45,33 @@
         </div>
         <article class="markdown-body">
 
-<h3 id='Humidor'> Tex Trimmer </h3>
+The tools below are used to classify Mathematical Theorems from the Wikipedia Page <a href='https://en.wikipedia.org/wiki/List_of_theorems'> List of Theorems </a>. Access the full Python Notebook <a href='/projects/Theorems.ipynb'> Here </a>.
+
+<h3 id='trimmer'> Tex Trimmer </h3>
 <p>
   In the following box, copy and paste a .tex document and the trimmer will return the same document with the tex formatting trimmed for easy analysis. You can also upload the .tex document using the file browser.
 </p>
 <textarea name="texinsert" placeholder="Insert Tex Document Here" cols="90" rows="8" required></textarea>
-<rp>
-<input type="file" accept=".tex,.txt" name="tex_browser">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="submit" value="Submit" name="submit_tex">
-</rp>
+<p>
+<input type="file" accept=".tex,.txt" name="tex_browser"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<input type="submit" value="Submit" name="submit_tex">
+</p>
+
+
+
+
+<h3 id='classifier'> Field of Mathematics Classification </h3>
+<p>
+  In the following box, copy and paste a .tex document and the classifier will respond with which field of mathematics your document is a part of. You can copy and paste, use the file browser, or provide a url for a .tex document. 
+</p>
+<textarea name="texinsert" placeholder="Insert Tex Document Here" cols="90" rows="8" required></textarea>
+<p>
+<input type="file" accept=".tex,.txt" name="tex_browser_classify">             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="url" name="tex_url" placeholder="www.TexDocument.com">   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="submit" value="Submit" name="submit_tex_classify">
+</p>
+
+
 
 
   
