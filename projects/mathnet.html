@@ -12,6 +12,11 @@
   <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
+  <script language="javascript">
+    myFunction(){
+      alert("Hi there, and welcome.")
+    }
+  </script>
 
   <title>dsherma7.github.io</title>
   <meta name="description" content="My Personal Github Webpage">
@@ -73,11 +78,11 @@ where:
 \end{enumerate}" cols="90" rows="8" required></textarea>
 <p>
 <input type="file" accept=".tex,.txt" name="tex_browser">        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
-<input type="submit" value="Submit" name="submit_tex">
-<!-- <button name="submit_tex" onclick="myFunction()">Click me</button>  -->
-  $('#submit_tex').on('click', function() {
+<!-- <input type="submit" value="Submit" name="submit_tex"> -->
+<button name="submit_tex" onclick="myFunction()">Click me</button> 
+ <!--  $('#submit_tex').on('click', function() {
     $.get('python.php', {url : 'url' });
-  });
+  --> });
 </p>
 
  
