@@ -37,13 +37,13 @@
     }
   </script>
   <script>
-      function action_page() {
+      function action_page(input) {
         // 
         // Baily–Borel theorem: algebraic geometry
         // Morera's theorem: complex analysis
         // Prokhorov's theorem: measure theory
         // Erdős–Pósa theorem: graph theory
-        document.getElementById("action_page_txt").src="/action_page.php" ;
+        document.getElementById("action_page_txt").src=$(input);
       }
     </script>
 </head>
