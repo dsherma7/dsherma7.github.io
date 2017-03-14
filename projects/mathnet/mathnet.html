@@ -116,16 +116,15 @@
     <p>
       <!-- <iframe src="/" id="action_page_txt" height="100" width="620"></iframe>  -->
       <textarea id="action_page_txt" placeholder="Temp" cols="70" rows="1"></textarea>    
-      <form action="/projects/mathnet/action_page.php" method="post" target="_blank">
-        First name:
-        <br>
-          <input type="text" name="firstname" value="Mickey">
-        <br>
-        Last name:
-        <br>
-          <input type="text" name="lastname" value="Mouse">
-        <br><br> 
-        <input type="submit" onclick="action_page()" value="Submit">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Name: <input type="text" name="name">
+        E-mail: <input type="text" name="email">
+        Website: <input type="text" name="website">
+        Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+        Gender:
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <input type="submit" name="btn">
       </form> 
     </p>
   </div>
