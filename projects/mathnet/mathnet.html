@@ -33,9 +33,19 @@
       // Morera's theorem: complex analysis
       // Prokhorov's theorem: measure theory
       // Erdős–Pósa theorem: graph theory
+      alert(document.getElementById("radioButton").click());
     }
   </script>
-
+  <script>
+      function action_page() {
+        // document.getElementById("WoldsThm").src="https://en.wikipedia.org/wiki/Wold's_theorem" ;
+        // Baily–Borel theorem: algebraic geometry
+        // Morera's theorem: complex analysis
+        // Prokhorov's theorem: measure theory
+        // Erdős–Pósa theorem: graph theory
+        alert(document.getElementById("radioButton").click());
+      }
+    </script>
 </head>
 
 <body>
@@ -99,6 +109,23 @@
         <button id="submit2" onclick="change_page()">Submit</button> &nbsp&nbsp
         <textarea name="class_txt" placeholder="Select a Theorem" cols="70" rows="1" id="class_txt" required></textarea>    
       </center>
+
+    </p>
+  </div>
+  <div>
+    <p>
+      <iframe src="/action_page.php" id="WoldsThm" height="100" width="620"></iframe> 
+      <form action="/action_page.php">
+        First name:
+        <br>
+          <input type="text" name="firstname" value="Mickey">
+        <br>
+        Last name:
+        <br>
+          <input type="text" name="lastname" value="Mouse">
+        <br><br> 
+        <input type="submit" value="Submit" onclick="action_page()>
+      </form> 
     </p>
   </div>
   </article>
