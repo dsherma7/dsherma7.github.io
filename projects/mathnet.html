@@ -74,7 +74,10 @@ where:
 <p>
 <input type="file" accept=".tex,.txt" name="tex_browser">        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
 <input type="submit" value="Submit" name="submit_tex">
-<button onclick="myFunction()">Click me</button> 
+<!-- <button name="submit_tex" onclick="myFunction()">Click me</button>  -->
+  $('#submit_tex').on('click', function() {
+    $.get('python.php', {url : 'url' });
+  });
 </p>
 
  
@@ -84,9 +87,9 @@ where:
 </p>
 <textarea name="texinsert" placeholder="Insert HTML Document Here" cols="90" rows="8" required></textarea>
 <p>
-<input type="file" accept=".html,.txt" name="html_browser"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="file" accept=".html,.txt" name="html_browser">       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <input type="submit" value="Submit" name="submit_html">
-<button onclick="myFunction()">Click me</button> 
+<!-- <button name="submit_html" onclick="myFunction()">Submit</button>  -->
 </p>
 
 
