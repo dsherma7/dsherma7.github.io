@@ -43,7 +43,7 @@
         // Morera's theorem: complex analysis
         // Prokhorov's theorem: measure theory
         // Erdős–Pósa theorem: graph theory
-        document.getElementById("action_page_txt").src=$(input);
+        document.getElementById("action_page_txt").innerHTML=$(input);
       }
     </script>
 </head>
@@ -114,8 +114,9 @@
   </div>
   <div>
     <p>
-      <iframe src="/action_page.php" id="action_page_txt" height="100" width="620"></iframe> 
-      <form action="/action_page.php">
+      <!-- <iframe src="/" id="action_page_txt" height="100" width="620"></iframe>  -->
+      <textarea id="action_page_txt" placeholder="Temp" cols="70" rows="1"></textarea>    
+      <form action="/projects/mathnet/action_page.php">
         First name:
         <br>
           <input type="text" name="firstname" value="Mickey">
