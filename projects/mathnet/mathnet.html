@@ -26,6 +26,16 @@
       document.getElementById("WoldsThm").src="https://en.wikipedia.org/wiki/Wold's_theorem" ;
     }
   </script>
+  <script>
+    function get_class() {
+      // document.getElementById("WoldsThm").src="https://en.wikipedia.org/wiki/Wold's_theorem" ;
+      // Baily–Borel theorem: algebraic geometry
+      // Morera's theorem: complex analysis
+      // Prokhorov's theorem: measure theory
+      // Erdős–Pósa theorem: graph theory
+    }
+  </script>
+
 </head>
 
 <body>
@@ -50,7 +60,7 @@
           </center>              
         </div>
         <span class="blc"></span><span class="trc"></span>
-        </div>
+        </div> 
 
   <article class="markdown-body">
   <div>
@@ -70,9 +80,9 @@
     <iframe src="https://en.wikipedia.org/wiki/Wold's_theorem" id="WoldsThm" height="300" width="620"></iframe>
     <center>
       <button id="submit1" onclick="change_page()">Submit</button> 
-      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <button id="reset1" onclick="change_back()">Reset</button> 
     </center>
    </div>
@@ -83,8 +93,8 @@
     </p>
     <p>
       <iframe src="https://en.wikipedia.org/wiki/Wold's_theorem" id="WoldsThm" height="300" width="620"></iframe> 
-      <label><input name='class' type="radio" id="rad1"> Baily-Borel Theorem</label> <label><input name='class' type="radio" id="rad2"> Morera's Theorem   </label>
-      <label><input name='class' type="radio" id="rad3"> Prokhorov's Theorem</label> <label><input name='class' type="radio" id="rad4"> Erdős–Pósa Theorem </label>
+      <label><input name='class' type="radio" id="rad1">Baily-Borel Theorem</label> <label><input name='class' type="radio" id="rad2"> Morera's Theorem   </label>
+      <label><input name='class' type="radio" id="rad3">Prokhorov's Theorem</label> <label><input name='class' type="radio" id="rad4"> Erdős–Pósa Theorem </label>
       <center>
         <button id="submit2" onclick="change_page()">Submit</button> &nbsp&nbsp
         <textarea name="class_txt" placeholder="Select a Theorem" cols="70" rows="1" id="class_txt" required></textarea>    
