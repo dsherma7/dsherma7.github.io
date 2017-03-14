@@ -60,7 +60,17 @@ The Math Theorem classifer was used to... (All Results here)
 <p>
   In the following box, copy and paste a .tex document and the trimmer will return the same document with the tex formatting trimmed for easy analysis. You can also upload the .tex document using the file browser.
 </p>
-<textarea name="texinsert" placeholder="Insert Tex Document Here" cols="90" rows="8" required></textarea>
+<textarea name="texinsert" placeholder="\section*{Wold's Theorem}
+In statistics, Wold's decomposition or the Wold representation theorem (not to be confused with the Wold theorem that is the discrete-time analog of the Wiener-Khinchin theorem) named after Herman Wold, says that every covariance-stationary time series $Y_t$ can be written as the sum of two time series, one deterministic and one stochastic.\\
+Formally
+$$Y_t = \sum_{j=0}^\infty b_j\epsilon_{t-j}+\nu_t$$
+where:
+\begin{enumerate}
+\item[*] $Y_t$ is the time series being considered,
+\item[*] $\epsilon$ is an uncorrelated sequence which is the innovation process to the process $Y_t$- that is, a white noise process that is input to the linear filter $\{b_j\}$.
+\item[*] $b$ is the \textit{possibly} infinite vector of moving average weights (coefficients or paramaters)
+\item[*] $\nu_t$ is a deterministic time series, such as one represented by a sine wave.
+\end{enumerate}" cols="90" rows="8" required></textarea>
 <p>
 <input type="file" accept=".tex,.txt" name="tex_browser">        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
 <input type="submit" value="Submit" name="submit_tex">
