@@ -48,6 +48,7 @@
     var currentIndex = 1;
     //NOTE: Set this value to the number of slides you have in the presentation.
     var maxIndex=5;
+
     function padzeros(x,maxLen){
       var out = x.toString();
       for (i=x.toString().length; i < blah.toString().length; i++){
@@ -55,6 +56,7 @@
       }
       return(out);
     }
+
     function swapImage(imageIndex){
         //Check if we are at the last image already, return if we are.
         if(imageIndex>maxIndex){
@@ -110,7 +112,7 @@
       The Math Theorem classifer was used to... (All Results here)
       <!-- <iframe src="https://dsherma7.github.io/projects/mathnet/Slides.pptx&embedded=true" id="ppt" height="500" width="620"></iframe>  -->
       <center>
-        <img src="Slides/Slide1.gif" id="mainImage" name="mainImage" width="100%" height="100%" alt="">
+        <img src="Slides/Slide01.png" id="mainImage" name="mainImage" width="100%" height="100%" alt="">
         <a href="#" onclick="swapImage(0);"><img src="/images/first.png" border=0 alt="First"></a>
         <a href="#" onclick="swapImage(currentIndex-1);"><img src="/images/left.png" border=0 alt="Back"></a>
         <a href="#" onclick="swapImage(currentIndex+1);"><img src="/images/right.png" border=0 alt="Next"></a>
