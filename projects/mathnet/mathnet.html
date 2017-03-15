@@ -26,25 +26,21 @@
       document.getElementById("WoldsThm").src="https://en.wikipedia.org/wiki/Wold's_theorem" ;
     }
   </script>
-  <script>
-    function get_class() {
-      // document.getElementById("WoldsThm").src="https://en.wikipedia.org/wiki/Wold's_theorem" ;
-      // Baily–Borel theorem: algebraic geometry
-      // Morera's theorem: complex analysis
-      // Prokhorov's theorem: measure theory
-      // Erdős–Pósa theorem: graph theory
-      alert(document.getElementById("radioButton").click());
-    }
+   <script>
+    //Global Variables
+    var links = ['wiki/Baily%E2%80%93Borel_theorem','/wiki/Morera%27s_theorem','/wiki/Prokhorov%27s_theorem','/wiki/Erd%C5%91s%E2%80%93P%C3%B3sa_theorem'];var fields = ['algebraic geometry','complex analysis','measure theory','graph theory'];
   </script>
   <script>
-      function action_page(input) {
-        // 
-        // Baily–Borel theorem: algebraic geometry
-        // Morera's theorem: complex analysis
-        // Prokhorov's theorem: measure theory
-        // Erdős–Pósa theorem: graph theory
-        document.getElementById("action_page_txt").innerHTML=$(input);
-      }
+  function get_class() {
+      var thm = document.getElementsByName('thms');      
+      for (i = -1; i < fields.length; i++){
+        if (thm[0].value == i.toString()){
+          document.getElementById("thm_page").src= 'https://en.wikipedia.org/'+links[i];
+            document.getElementById("class_txt").innerHTML=fields[i];
+            break;
+          }
+        } 
+      }      
     </script>
 </head>
 
@@ -99,110 +95,21 @@
    <div>
     <h3 id='classifier'> Field of Mathematics Classification </h3>
     <p>
-      In the following box, copy and paste an .html file of a math theorem and the classifier will respond with which field of mathematics your document is a part of. You can copy and paste or use the file browser to provide a .html document. 
+      Select a Mathematical Theorem from the drop down box and click to submit to see what field of Mathematics that the algorithm classifies that theorem in. 
     </p>
-    <p>
-      <iframe src="https://en.wikipedia.org/wiki/Wold's_theorem" id="WoldsThm" height="300" width="620"></iframe> 
-      <label><input name='class' type="radio" id="rad1">Baily-Borel Theorem</label> <label><input name='class' type="radio" id="rad2"> Morera's Theorem   </label>
-      <label><input name='class' type="radio" id="rad3">Prokhorov's Theorem</label> <label><input name='class' type="radio" id="rad4"> Erdős–Pósa Theorem </label>
-      <center>
-        <button id="submit2" onclick="change_page()">Submit</button> &nbsp&nbsp
-        <textarea name="class_txt" placeholder="Select a Theorem" cols="70" rows="1" id="class_txt" required></textarea>    
-      </center>
-
-    </p>
-  </div>
-  <div>
-    <p>
-      <?php
-      // define variables and set to empty values
-      $nameErr = $emailErr = $genderErr = $websiteErr = "";
-      $name = $email = $gender = $comment = $website = "";
-
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["name"])) {
-          $nameErr = "Name is required";
-        } else {
-          $name = test_input($_POST["name"]);
-          // check if name only contains letters and whitespace
-          if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-            $nameErr = "Only letters and white space allowed";
-          }
-        }
-        
-        if (empty($_POST["email"])) {
-          $emailErr = "Email is required";
-        } else {
-          $email = test_input($_POST["email"]);
-          // check if e-mail address is well-formed
-          if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
-          }
-        }
-          
-        if (empty($_POST["website"])) {
-          $website = "";
-        } else {
-          $website = test_input($_POST["website"]);
-          // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-          if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-            $websiteErr = "Invalid URL";
-          }
-        }
-
-        if (empty($_POST["comment"])) {
-          $comment = "";
-        } else {
-          $comment = test_input($_POST["comment"]);
-        }
-
-        if (empty($_POST["gender"])) {
-          $genderErr = "Gender is required";
-        } else {
-          $gender = test_input($_POST["gender"]);
-        }
-      }
-
-      function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-      }
-      ?>
-      <!-- <iframe src="/" id="action_page_txt" height="100" width="620"></iframe>  -->
-      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-        Name: <input type="text" name="name" value="<?php echo $name;?>">
-        <span class="error">* <?php echo $nameErr;?></span>
-        <br><br>
-        E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-        <span class="error">* <?php echo $emailErr;?></span>
-        <br><br>
-        Website: <input type="text" name="website" value="<?php echo $website;?>">
-        <span class="error"><?php echo $websiteErr;?></span>
-        <br><br>
-        Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-        <br><br>
-        Gender:
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-        <span class="error">* <?php echo $genderErr;?></span>
-        <br><br>
-        <input type="submit" name="submit" value="Submit">  
+      <form action="javascript:void(0);">
+        <center>
+        <iframe src="https://en.wikipedia.org/wiki/Wold's_theorem" id="thm_page" height="300" width="620"></iframe> 
+        <select name="thms" size=1>
+          <option value="0">Baily-Borel Theorem</option>
+          <option value="1">Morera's Theorem </option>
+          <option value="2">Prokhorov's Theorem</option>
+          <option value="3">Erdős–Pósa Theorem</option>
+        </select>
+        <button id="btn_class" onclick="get_class()"> Submit </button>
+        <textarea name="class_txt" placeholder="Select a Theorem" cols="50" rows="1" id="class_txt"></textarea>    
+        </center>
       </form>
-      <?php
-        echo "<h2>Your Input:</h2>";
-        echo $name;
-        echo "<br>";
-        echo $email;
-        echo "<br>";
-        echo $website;
-        echo "<br>";
-        echo $comment;
-        echo "<br>";
-        echo $gender;
-      ?>
-    </p>
   </div>
   </article>
 </body>
