@@ -28,7 +28,7 @@
   </script>
    <script>
     //Global Variables
-    var links = ["wiki/Baily-Borel_theorem","/wiki/Morera's_theorem","/wiki/Prokhorov's_theorem","/wiki/Tarski's_plank_problem","/wiki/Barbier's_theorem","/wiki/Bapat-Beg_theorem","/wiki/Kneser's_theorem_(combinatorics)","/wiki/Kneser's_theorem_(differential_equations)","/wiki/Kochen-Specker_theorem","/wiki/Kodaira_embedding_theorem","/wiki/Koebe_1/4_theorem"];
+    var links = ["/wiki/Baily-Borel_theorem","/wiki/Morera's_theorem","/wiki/Prokhorov's_theorem","/wiki/Tarski's_plank_problem","/wiki/Barbier's_theorem","/wiki/Bapat-Beg_theorem","/wiki/Kneser's_theorem_(combinatorics)","/wiki/Kneser's_theorem_(differential_equations)","/wiki/Kochen-Specker_theorem","/wiki/Kodaira_embedding_theorem","/wiki/Koebe_1/4_theorem"];
     var fields = ['algebraic geometry','complex analysis','measure theory','graph theory','geometry','geometry','statistics','combinatorics','differential equations','physics'];
   </script>
   <script>
@@ -36,7 +36,7 @@
       var thm = document.getElementsByName('thms');      
       for (i = -1; i < fields.length; i++){
         if (thm[0].value == i.toString()){
-          document.getElementById("thm_page").src= 'https://en.wikipedia.org/'+links[i];
+          document.getElementById("thm_page").src= 'https://en.wikipedia.org'+links[i];
             document.getElementById("class_txt").innerHTML=fields[i];
             break;
           }
