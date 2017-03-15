@@ -59,16 +59,13 @@
     var maxIndex=10;
 
     function swapImage(imageIndex){
-        //Check if we are at the last image already, return if we are.
-        if(imageIndex>maxIndex){
+        
+        if(imageIndex>maxIndex){ //Check if we are at the last image already, return if we are.
             imageIndex=maxIndex;
-            return;
-        }
-
-        //Check if we are at the first image already, return if we are.
-        if(imageIndex<1){
+            //return;
+        }else if(imageIndex<1){  //Check if we are at the first image already, return if we are.
             imageIndex=1;
-            return;
+            //return;
         }
 
         currentIndex=imageIndex;
