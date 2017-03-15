@@ -45,7 +45,7 @@
     </script>
     <script>
       function padzeros(x,maxLen){
-        var out = x.toString();
+        var out = "";
         for (i=x.toString().length; i < blah.toString().length; i++){
             out = '0'+out;
         }
@@ -72,7 +72,7 @@
 
         currentIndex=imageIndex;
         //Otherwise update mainImage
-        document.getElementById("mainImage").src='Slides/Slide' +  currentIndex  + '.png';
+        document.getElementById("mainImage").src='Slides/Slide' +  padzeros(currentIndex,maxIndex.toString().length) + currentIndex  + '.png';
         return;
     }
 </script>
