@@ -51,7 +51,7 @@
         }
         return(out);
       }
-    </script>
+    </script>    
     <script>
     //Initilize start value to 1 'For Slide1.GIF'
     var currentIndex=1;
@@ -110,11 +110,17 @@
       The Math Theorem classifer was used to... (All Results here)
       <!-- <iframe src="https://dsherma7.github.io/projects/mathnet/Slides.pptx&embedded=true" id="ppt" height="500" width="620"></iframe>  -->
       <center>
-        <img src="Slides/Slide1.png" id="mainImage" name="mainImage" width="100%" height="100%" alt="" onclick="swapImage(currentIndex+1);">
-        <a href="#" onclick="swapImage(-1);"><img src="/images/first.png" border=0 alt="First"></a>
-        <a href="#" onclick="swapImage(currentIndex-1);"><img src="/images/left.png" border=0 alt="Back"></a>
-        <a href="#" onclick="swapImage(currentIndex+1);"><img src="/images/right.png" border=0 alt="Next"></a>
-        <a href="#" onclick="swapImage(maxIndex);"><img src="/images/last.png" border=0 alt="Last"></a>
+        <form action="javascript:void(0);">
+          <img src="Slides/Slide1.png" id="mainImage" name="mainImage" width="100%" height="100%" alt="" onclick="swapImage(currentIndex+1);">
+          <!-- <a href="#" onclick="swapImage(-1);"><img src="/images/first.png" border=0 alt="First"></a> -->
+          <button id="btn_first" onclick="swapImage(0)"> First </button>
+          <!-- <a href="#" onclick="swapImage(currentIndex-1);"><img src="/images/left.png" border=0 alt="Back"></a> -->
+          <button id="btn_prev" onclick="swapImage(currentIndex-1)"> Prev </button>
+          <!-- <a href="#" onclick="swapImage(currentIndex+1);"><img src="/images/right.png" border=0 alt="Next"></a> -->
+          <button id="btn_nxt" onclick="swapImage(currentIndex+1)"> Next </button>
+          <!-- <a href="#" onclick="swapImage(maxIndex);"><img src="/images/last.png" border=0 alt="Last"></a> -->
+          <button id="btn_last" onclick="swapImage(maxIndex)"> Last </button>
+        </form>
       </center>
     </p>
   </div>
