@@ -43,20 +43,20 @@
         } 
       }      
     </script>
+    <script>
+      function padzeros(x,maxLen){
+        var out = x.toString();
+        for (i=x.toString().length; i < blah.toString().length; i++){
+            out = '0'+out;
+        }
+        return(out);
+      }
+    </script>
     <script type="text/javascript">
     //Initilize start value to 1 'For Slide1.GIF'
     var currentIndex = 1;
     //NOTE: Set this value to the number of slides you have in the presentation.
     var maxIndex=5;
-
-    function padzeros(x,maxLen){
-      var out = x.toString();
-      for (i=x.toString().length; i < blah.toString().length; i++){
-          out = '0'+out;
-      }
-      return(out);
-    }
-
     function swapImage(imageIndex){
         //Check if we are at the last image already, return if we are.
         if(imageIndex>maxIndex){
