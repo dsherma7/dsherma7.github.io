@@ -126,8 +126,19 @@
     <p>
       Each of the fields of mathematics were classified by their most common words in all of the related Theorems. To see the most common words in both word cloud and bar graph form use the objects below. Select a field from the drop down box and then click submit to populate these graphs.  
     </p>
-    <form>
-      
+    <form action="javascript:void(0);">
+      <center>
+      <iframe class="zoom" src="https://dsherma7.github.io/projects/mathnet/plots/wordclouds/temp.png" id="thm_page" height="200" width="620" -ms-zoom: 0.75 zoom=1000></iframe> 
+      <iframe src="https://dsherma7.github.io/projects/mathnet/plots/bargraphs/1.png" id="thm_page" height="300" width="620"></iframe> 
+      <select name="thms" size=1>
+        <option value="0">Baily-Borel Theorem</option>
+        <option value="1">Morera's Theorem </option>
+        <option value="2">Prokhorov's Theorem</option>
+        <option value="3">Erdős–Pósa Theorem</option>
+      </select>
+      <button id="btn_class" onclick="get_class()"> Submit </button>
+      <textarea name="class_txt" placeholder="Select a Theorem" cols="50" rows="1" id="class_txt"></textarea>    
+      </center>
     </form>
   </div>
   <div>
