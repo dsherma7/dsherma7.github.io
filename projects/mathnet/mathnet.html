@@ -31,6 +31,18 @@
     var links = ["/wiki/Baily-Borel_theorem","/wiki/Morera's_theorem","/wiki/Prokhorov's_theorem","/wiki/Erdős–Pósa_theorem","/wiki/Tarski's_plank_problem","/wiki/Barbier's_theorem","/wiki/Bapat-Beg_theorem","/wiki/Kneser's_theorem_(combinatorics)","/wiki/Kneser's_theorem_(differential_equations)","/wiki/Kochen-Specker_theorem","/wiki/Kodaira_embedding_theorem","/wiki/Koebe_1/4_theorem"];
     var fields = ['algebraic geometry','complex analysis','measure theory','graph theory','geometry','geometry','statistics','combinatorics','differential equations','physics'];
   </script>
+    <script>
+  function set_wordcloud() {
+      var thm = document.getElementsByName('fields');      
+      for (i = -1; i < fields.length; i++){
+        if (thm[0].value == i.toString()){
+            document.getElementById("wordcloud").src= 'https://dsherma7.github.io/projects/mathnet/plots/wordclouds/'+i.toString()+'.png';
+            document.getElementById("bargraph").src= 'https://dsherma7.github.io/projects/mathnet/plots/bargraphs/'+i.toString()+'.png';          
+            break;
+          }
+        } 
+      }      
+    </script>
   <script>
   function get_class() {
       var thm = document.getElementsByName('thms');      
@@ -130,7 +142,7 @@
       <center>
       <iframe src="https://dsherma7.github.io/projects/mathnet/plots/wordclouds/0.png" id="wordcloud" height="190" width="340"></iframe> 
       <iframe src="https://dsherma7.github.io/projects/mathnet/plots/bargraphs/0.png" id="bargraph" height="190" width="230"></iframe> 
-      <select name="thms" size=1>
+      <select name="fields" size=1>
         <option value="0">Baily-Borel Theorem</option>
         <option value="1">Morera's Theorem </option>
         <option value="2">Prokhorov's Theorem</option>
