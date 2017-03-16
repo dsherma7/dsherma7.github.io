@@ -35,7 +35,7 @@
     <script>
   function set_wordcloud() {
       var thm = document.getElementsByName('fields');      
-      for (i = -1; i < fields.length; i++){
+      for (i = 0; i < fields.length; i++){
         if (thm[0].value == i.toString()){
             document.getElementById("wordcloud").src= 'https://dsherma7.github.io/projects/mathnet/plots/wordclouds/'+i.toString()+'.png';
             document.getElementById("bargraph").src= 'https://dsherma7.github.io/projects/mathnet/plots/bargraphs/'+i.toString()+'.png';          
@@ -144,10 +144,17 @@
       <iframe src="https://dsherma7.github.io/projects/mathnet/plots/wordclouds/0.png" id="wordcloud" height="190" width="340"></iframe> 
       <iframe src="https://dsherma7.github.io/projects/mathnet/plots/bargraphs/0.png" id="bargraph" height="190" width="230"></iframe> 
       <select name="fields" size=1>
-        <option value="0">Baily-Borel Theorem</option>
-        <option value="1">Morera's Theorem </option>
-        <option value="2">Prokhorov's Theorem</option>
-        <option value="3">Erdős–Pósa Theorem</option>
+        <option value="1">geometry</option>
+        <option value="2">statistics</option>
+        <option value="3">combinatorics</option>
+        <option value="4">differential equations</option>
+        <option value="5">physics</option>
+        <option value="6">algebraic geometry</option>
+        <option value="7">complex analysis</option>
+        <option value="8">stochastic processes</option>
+        <option value="9">dynamical systems</option>
+        <option value="10">physics</option>
+        <option value="11">mathematical logic</option>
       </select> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       <button id="btn_wordcloud" onclick="set_wordcloud()"> Submit </button>
       </center>
