@@ -59,18 +59,20 @@
       }      
     </script>
    <script>
-   var thm1_val = -1
-   var thm2_val = -1
+   var thm1_val = -1;
+   var thm2_val = -1;
     function get_class2() {
         var thm1 = document.getElementsByName('thms_a');
         var thm2 = document.getElementsByName('thms_b');
         if (thm1[0].value == thm1_val){
-          thm = thm2
+          thm = thm2;
         }else if(thm2[0].value == thm2_val){
-          thm = thm1
+          thm = thm1;
         }else{
-          alert('Bad Thms')
+          alert('Bad Thms');
         }
+        thm1_val = thm1[0].value;
+        thm2_val = thm2[0].value;
         for (i = -1; i < links2.length; i++){
           if (thm[0].value == i.toString()){
               document.getElementById("thm_page2").src= 'https://en.wikipedia.org'+links2[i];
