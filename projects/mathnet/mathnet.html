@@ -31,6 +31,8 @@
     var links = ["/wiki/Baily-Borel_theorem","/wiki/Morera's_theorem","/wiki/Prokhorov's_theorem","/wiki/Erdős–Pósa_theorem","/wiki/Tarski's_plank_problem","/wiki/Barbier's_theorem","/wiki/Bapat-Beg_theorem","/wiki/Kneser's_theorem_(combinatorics)","/wiki/Kneser's_theorem_(differential_equations)","/wiki/Kochen-Specker_theorem","/wiki/Kodaira_embedding_theorem","/wiki/Koebe_1/4_theorem"];
     var fields = ['algebraic geometry','complex analysis','measure theory','graph theory','geometry','geometry','statistics','combinatorics','differential equations','physics'];
     var titles = ["Tarski's plank problem","Barbier's theorem","Bapat–Beg theorem","Kneser's theorem (combinatorics)","Kneser's theorem (differential equations)","Kochen–Specker theorem","Kodaira embedding theorem","Koebe 1/4 theorem","Kolmogorov extension theorem","Kolmogorov–Arnold–Moser theorem","König's theorem (kinetics)","König's theorem (set theory)"];
+   var links2 = ["/wiki/Modigliani-Miller_theorem","/wiki/Goddard-Thorn_theorem","/wiki/Nyquist-Shannon_sampling_theorem","/wiki/Behnke-Stein_theorem","/wiki/Chasles'_theorem_(disambiguation)","/wiki/Caratheodory's_theorem_(convex_hull)","/wiki/Novikov's_compact_leaf_theorem","/wiki/Rationality_theorem","/wiki/Lax-Richtmyer_theorem","/wiki/Liouville's_theorem_(conformal_mappings)","/wiki/Beauville-Laszlo_theorem","/wiki/Shirshov-Witt_theorem"];
+   var pred = ["economics","functional analysis","differential equations","dynamical systems","commutative algebra","algebraic surfaces","operator theory","probability","control theory","ring theory","homotopy theory","group theory"]
   </script>
     <script>
   function set_wordcloud() {
@@ -55,6 +57,21 @@
           }
         } 
       }      
+    </script>
+   <script>
+    function get_class2() {
+        var thm1 = document.getElementsByName('thms_a');
+        var thm2 = document.getElementsByName('thms_b');
+        for (i = -1; i < fields2.length; i++){
+          if (thm1[0].value == i.toString() || thm2[0].value == i.toString()){
+              document.getElementById("thm_page2").src= 'https://en.wikipedia.org'+links2[i];
+              document.getElementById("class_txt2").innerHTML=pred[i];            
+              document.getElementById("a"+i.toString()).selected=1;
+              document.getElementById("b"+i.toString()).selected=1;            
+              break;
+            }
+          } 
+        }      
     </script>
     <script>
       function padzeros(x,maxLen){
@@ -206,12 +223,78 @@
   <h3 id='beautiful'>Beautiful Words </h3>
   <p>
     Following an article on the most <i>Beautiful</i> theorems of Mathematics from <a href=https://www.quora.com/Which-are-the-most-beautiful-mathematical-theorems-and-why target='_blank'>www.quora.com</a>, the following illustrates some traits of all these theorems as a collection. Quora asked people to consider the following when selecting theorems for the list
-
-    
+      <center>
+      <table style="width: 100%;">
+        <tr>
+          <th>Advanced</th>
+          <th>Intermediate</th>
+          <th>Basic</th>
+        </tr>
+        <tr>
+          <td>R</td>
+          <td>Python</td>
+          <td>Prolog</td>
+        </tr>
+        <tr> 
+          <td>C/C<sup>++</sup></td>
+          <td>SQL</td>
+          <td>LISP</td>
+        </tr>
+        <tr>
+          <td>Command Line</td>
+          <td>Java/JS</td>
+          <td>VBA</td>
+        </tr>
+      </table>
+      </center>
   </p>
   </div>
-
-
+  <div>
+    <h3 id='unclassified'></h3>
+    <p>
+      In the pre-processing step, we removed any theorems that were a part of some obscure field of Mathematics (per Wikipedia). The following will try to re-classify those Theorems into more appropriate fields so that they can be included with their fellow theorems. For example the field Quantum Theory really should be lumped in with Physics, and 'Several Complex Variables' is just Complex Analysis. Below shows the predicted class of a Theorem or Field. Select either a field or a theorem title and this will display the page for that Theorem as well as the predicted class based on the model. 
+    </p>
+    <p>
+      <form action="javascript:void(0);">
+        <center>
+        <iframe src="https://dsherma7.github.io/projects/mathnet/mathnet.html" id="thm_page2" height="300" width="620"></iframe> 
+        
+          <select name="thms_a" size=1>
+            <option id="a0" value="0" selected=0>finance theory</option>
+            <option id="a1" value="1" selected=0>vertex algebras</option>
+            <option id="a2" value="2" selected=0>information theory</option>
+            <option id="a3" value="3" selected=0>several complex variables</option>
+            <option id="a4" value="4" selected=0>disambiguation</option>
+            <option id="a5" value="5" selected=0>convex hull</option>
+            <option id="a6" value="6" selected=0>foliations</option>
+            <option id="a7" value="7" selected=0>politics</option>
+            <option id="a8" value="8" selected=0>numerical analysis</option>
+            <option id="a9" value="9" selected=0>conformal mappings</option>
+            <option id="a10" value="10" selected=0>vector bundles</option>
+            <option id="a11" value="11" selected=0>lie algebras</option>
+          </select>
+        
+          <select name="thms_b" size=1>
+            <option id="b0" value="0" selected=0>Modigliani–Miller theorem</option>
+            <option id="b1" value="1" selected=0>Goddard–Thorn theorem</option>
+            <option id="b2" value="2" selected=0>Nyquist–Shannon sampling theorem</option>
+            <option id="b3" value="3" selected=0>Behnke–Stein theorem</option>
+            <option id="b4" value="4" selected=0>Chasles' theorem (disambiguation)</option>
+            <option id="b5" value="5" selected=0>Carathéodory's theorem (convex hull)</option>
+            <option id="b6" value="6" selected=0>Novikov's compact leaf theorem</option>
+            <option id="b7" value="7" selected=0>Rationality theorem</option>
+            <option id="b8" value="8" selected=0>Lax–Richtmyer theorem</option>
+            <option id="b9" value="9" selected=0>Liouville's theorem (conformal mappings)</option>
+            <option id="b10" value="10" selected=0>Beauville–Laszlo theorem</option>
+            <option id="b11" value="11" selected=0>Shirshov–Witt theorem</option>
+          </select>
+        
+        <button id="btn_class" onclick="get_class2()"> Submit </button>
+        <textarea name="class_txt" placeholder="Select a Theorem or Field" id="class_txt2" style="width: 235px; height: 18px;"></textarea>  
+        </center>
+      </form>
+    </p>
+  </div>
   </article>
 </body>
 </html>
