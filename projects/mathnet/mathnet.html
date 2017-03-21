@@ -59,11 +59,20 @@
       }      
     </script>
    <script>
+   var thm1_val = -1
+   var thm2_val = -1
     function get_class2() {
         var thm1 = document.getElementsByName('thms_a');
         var thm2 = document.getElementsByName('thms_b');
+        if (thm1[0].value == thm1_val){
+          thm = thm2
+        }else if(thm2[0].value == thm2_val){
+          thm = thm1
+        }else{
+          alert('Bad Thms')
+        }
         for (i = -1; i < links2.length; i++){
-          if (thm1[0].value == i.toString() || thm2[0].value == i.toString()){
+          if (thm[0].value == i.toString()){
               document.getElementById("thm_page2").src= 'https://en.wikipedia.org'+links2[i];
               document.getElementById("class_txt2").innerHTML=pred[i];            
               document.getElementById("a"+i.toString()).selected=1;
@@ -271,7 +280,7 @@ Euclid's Theorem of the Infinitude of Primes (Number Theory, Euclid), The Minima
     <iframe src="https://dsherma7.github.io/projects/mathnet/plots/AllBeautifulWordCloud.jpg" style="width:630px; height:200px;"></iframe>
   </center>
   <p>
-    Then the SVM classifer was used on these most common words to determine which Field of Mathematics most encompasses the class of <i>Beautiful Theorems</i>, and the field that most represents all the Beautiful theorems as a whole is <b>Mathematical Logic</b>. A fitting classification, as all of Mathematics pulls from this field. Hence, Mathematical logic would likely be a strong contender in a more subjective classification of the most beautiful theorems. Moreover, Mathematical Logic the independence reason for selecting a Beautiful Theorem leaves mathematical logic as the most likely field to pull from as it is the foundation of all other mathematics. 
+    Then the SVM classifer was used on these most common words to determine which Field of Mathematics most encompasses the class of <i>Beautiful Theorems</i>, and the field that most represents all the Beautiful theorems as a whole is <b>Mathematical Logic</b>. A fitting classification, as all of Mathematics pulls from this field. Hence, Mathematical logic would likely be a strong contender in a more subjective classification of the most beautiful theorems. Moreover, Mathematical Logic should be one of the most Unique, Central, Original, and Independent fields as it is the base from which all Mathematics is built upon.  
   </p>
   </div>
   <div>
