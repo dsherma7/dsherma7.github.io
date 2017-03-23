@@ -94,7 +94,30 @@
         }
         return(out);
       }
-    </script>    
+    </script>   
+    <script>
+  function get_plots() {
+
+        var plot = document.getElementsByName('plotType')[0].value;  
+        switch(plot) {
+            case "MNB":
+                document.getElementById("plot").style="width:650px;height:300px;";
+                document.getElementById("plot").src="https://dsherma7.github.io/projects/mathnet/plots/MNBBag.jpg";
+                break;
+                
+            case "SVM":
+                document.getElementById("plot").style="width:650px;height:300px;";
+                document.getElementById("plot").src="https://dsherma7.github.io/projects/mathnet/plots/SVMBag.jpg";
+                break;
+                
+            case "GridSearch":
+                document.getElementById("plot").style="width:320px;height:300px;";
+                document.getElementById("plot").src="https://dsherma7.github.io/projects/mathnet/plots/GridSearch.png";
+                break;
+            default:                
+        }               
+      }      
+    </script> 
     <script>
     //Initilize start value to 1 'For Slide1.GIF'
     var currentIndex=1;
@@ -221,6 +244,17 @@
     <p>
       A classifer was built in order to determine which field of Mathematics most likely represented a given Theorem. In order to determine the best Theorem, different models were tested and a <a href="https://en.wikipedia.org/wiki/Hyperparameter_optimization#Grid_search">Grid Search</a> was utilized to obtain the best Hyper-Parameters. The ROC curves, accuracy, plots, and grid search visualization are shown below. 
     <p>
+      <form action="javascript:void(0);">
+        <center>
+        <p><img id="plot" src="" alt="Select a Plot" style="width:650px;height:300px;"></p>
+        <select name="plotType" size=1>
+          <option value="GridSearch">GridSearch</option> 
+          <option value="MNB">Naive Bayes</option> 
+          <option value="SVM">SVM</option>          
+        </select>
+        <button id="btn_class" onclick="get_plots()"> Submit </button>        
+        </center>
+      </form>
 
     <p>
       Select a Mathematical Theorem from the drop down box and click to submit to see what field of Mathematics that the algorithm classifies that theorem in. 
