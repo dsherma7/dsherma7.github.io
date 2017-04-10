@@ -49,8 +49,8 @@ a{
 	font-weight: 700;
 }
 .container > header h2{
-	font-size: 14px;
-	font-weight: 300;
+	font-size: 100px;
+	font-weight: 20;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	margin: 0;
@@ -61,7 +61,7 @@ a{
 /* Header Style */
 .codrops-top{
 	line-height: 24px;
-	font-size: 11px;
+	font-size: 100px;
 	background: #fff;
 	background: rgba(255, 255, 255, 0.6);
 	text-transform: uppercase;
@@ -99,7 +99,7 @@ a{
 	padding: 0px 6px;
 	color: #aaa;
 	line-height: 20px;	
-	font-size: 13px;
+	font-size: 113px;
 	text-shadow: 1px 1px 1px #fff;
 	border: 1px solid #fff;
 	background: #ffffff; /* Old browsers */
