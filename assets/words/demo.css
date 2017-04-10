@@ -1,6 +1,6 @@
 /*@import url('normalize.css');*/
 /* General Demo Style */
-html{
+/*html{
 	height: 100%;
 }
 body{
@@ -16,8 +16,8 @@ body{
 a{
 	color: #555;
 	text-decoration: none;
-}
-.container{
+}*/
+/*.container{
 	width: 100%;
 	min-width: 320px;
 	position: relative;
@@ -57,7 +57,7 @@ a{
 	padding: 15px 0 5px 0;
 	color: #6190ca;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
-}
+}*/
 /* Header Style */
 .codrops-top{
 	line-height: 24px;
