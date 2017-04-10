@@ -22,6 +22,26 @@
   <link href="/assets/navbar/style.css" media="screen" rel="stylesheet" type="text/css" />
   <script src="/assets/navbar/prefix-free.js"></script>
 
+  <!-- For Rotating Word Font -->
+  <link href='http://fonts.googleapis.com/css?family=Trocchi|Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+  <link href="/assets/words/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="/assets/words/demo.css" />
+  <script src="js/modernizr.custom.72111.js"></script>
+  <style>
+    .no-cssanimations .rw-words span:first-child{
+      opacity: 1;
+      color: #fff;
+      text-shadow: none;
+    }
+  </style>
+  <!--[if lt IE 9]> 
+    <style>
+      body{ background: #fff; }
+      .rw-wrapper{ display: none; } 
+      .rw-sentence-IE{ display: block; }
+    </style>
+  <![endif]-->
+
 </head>
 
 <body>
@@ -70,6 +90,21 @@
 
      
         <article class="markdown-body">
+
+    <section class="rw-wrapper">
+      <h2 class="rw-sentence">
+        <span>Someone </span>
+        <span>who can</span>
+        <!-- <span>can</span> -->
+        <div class="rw-words">
+          <span>develop webpages</span>
+          <span>build predictive models</span>
+          <span>self motivate</span>
+          <span>be your next employee</span>
+        </div>
+        <span>today?</span>
+      </h2>
+    </section>
 
   <div style="top:40px;">
     <div>
