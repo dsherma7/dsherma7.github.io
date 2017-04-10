@@ -2,7 +2,7 @@
 	width: 100%;
 	position: relative;
 	margin: 0px auto 0 auto;
-	padding: 10px;
+	padding: 100px;
 }
 .rw-sentence{
 	margin: 0;
@@ -19,33 +19,33 @@
 }
 .rw-sentence > span:first-child{	
 	top: 0px;
-	left: 140px;
-	font-size: 20%;
+	left: 40px;
+	font-size: 220%;
 	color: rgb(177, 235, 205,0.9);
 }
 .rw-sentence > span:nth-child(2){
-	top: 160px;
-	left: 100px;
-	font-size: 10%;
+	top: 60px;
+	left: 130px;
+	font-size: 180%;
 	color: rgb(205, 244, 179);
 }
 .rw-sentence > span:nth-child(3){
 	top: 185px;
 	left: 465px;
-	font-size: 520%;
+	font-size: 320%;
 	color: rgb(205, 244, 200);
 }
 .rw-sentence > span:last-child{
-	top: 435px;
-	left: 550px;
-	font-size: 90%;
+	top: 165px;
+	left: 250px;
+	font-size: 190%;
 	color: rgb(155, 204, 184,1);
 }
 .rw-words{
 	position: absolute;
-	font-size: 70%;
-	left: 220px;
-	top: 220px;
+	font-size: 450%;
+	left: 30px;
+	top: 100px;
 	height: 80px;
 	width: 100px;
 	-webkit-perspective: 500px;
