@@ -18,21 +18,21 @@
 	position: absolute;
 }
 .rw-sentence > span:first-child{	
-	top: 0px;
-	left: 40px;
+	top: -20px;
+	left: 120px;
 	font-size: 220%;
 	color: rgb(177, 235, 205,0.9);
 }
 .rw-sentence > span:nth-child(2){
-	top: 60px;
-	left: 130px;
+	top: 35px;
+	left: 240px;
 	font-size: 180%;
 	color: rgb(205, 244, 179);
 }
 .rw-sentence > span:nth-child(3){
-	top: 185px;
-	left: 465px;
-	font-size: 320%;
+	top: 75px;
+	left: 195px;
+	font-size: 220%;
 	color: rgb(205, 244, 200);
 }
 .rw-sentence > span:last-child{
@@ -45,7 +45,7 @@
 	position: absolute;
 	font-size: 450%;
 	left: 30px;
-	top: 100px;
+	top: 120px;
 	height: 80px;
 	width: 100px;
 	-webkit-perspective: 500px;
